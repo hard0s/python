@@ -1,12 +1,14 @@
-def biggest(mx, *args):
-    for a in args:
-        if mx < a: mx = a
-    return mx
+def biggest(* args):
+    max = args[0]
+    for item in args[1:]:
+        if item > max:
+            max = item
+    return max
 
-a = list(map(int,input("Введите набор чисел: ").split()))
+a = list(map(int,input("Введите числа в массив: ").split(' ')))
 
 b = biggest(a)
 
 str(b)
 
-print("Наибольшее число:" + b)
+print(b)

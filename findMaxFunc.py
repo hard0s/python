@@ -5,5 +5,10 @@ def biggest(a):
             max = item
     print("Наибольшее число: ", max)
 
-a = list(map(int,input("Введите числа в массив: ").split(' ')))
-biggest(a)
+a = list(map(int,input("Введите набор чисел: ").split()))
+
+b = biggest(a)
+
+str(b)
+
+print("Наибольшее число:" + b)

@@ -1,6 +1,6 @@
 import string
 
-def fileFunc(filename):
+def openFile(filename):
     file = open(filename, "r")
 
     text = file.read()
@@ -10,7 +10,8 @@ def fileFunc(filename):
     
     return "Doesn't contain Latin Alphabet"
 
+def __main__():
+    f = openFile("test")
+    print(f)
 
-filename = str(input("Enter filename: "))
-f = fileFunc(filename)
-print(f)
+__main__()

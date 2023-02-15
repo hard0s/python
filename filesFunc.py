@@ -1,17 +1,15 @@
-import re
+import string
 
 def fileFunc(filename):
-    file = open(filename, 'r')
+    file = open(filename, "r")
+
     text = file.read()
-    latinAlphabet = re.compile('[a-zA-Z]+')
-    for i in range(len(text)):
-        if text[i] == latinAlphabet:
-            returnValue = "File contains Latin Alphabet"
-            break
-        else:
-            returnValue = "File don't contains Latin Alphabet"
-    file.close()
-    print(returnValue)
+    for line in string.ascii_lowercase:
+        if line in text:
+            return "Contains Latin Alphabet"
+    
+    return "Doesn't contain Latin Alphabet"
 
 filename = str(input("Enter filename: "))
-fileFunc(filename)
+f = fileFunc(filename)
+print(f)

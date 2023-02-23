@@ -1,17 +1,13 @@
-import string
+import random
 
-def openFile(filename):
-    file = open(filename, "r")
+with open('test.txt') as f:
+    lines = f.readlines()
 
-    text = file.read()
-    for line in string.ascii_lowercase:
-        if line in text:
-            return "Contains Latin Alphabet"
-    
-    return "Doesn't contain Latin Alphabet"
+qa_pairs = [line.strip().split('|') for line in lines]
+question, answer = random.choice(qa_pairs)
+user_answer = input(question + '\n')
 
-def __main__():
-    f = openFile("test")
-    print(f)
-
-__main__()
+if user_answer.strip().lower() == answer.lower():
+    print('Correct!')
+else:
+    print(f'Sorry, the correct answer is "{answer}".')

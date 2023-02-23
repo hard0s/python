@@ -1,0 +1,4 @@
+What is the capital of France?|Paris
+What is the tallest mountain in the world?|Mount Everest
+What is the largest country in the world by area?|Russia
+Who invented the telephone?|Alexander Graham Bell

@@ -7,9 +7,8 @@ def fileFunc(filename):
     for line in string.ascii_lowercase:
         if line in text:
             return "Contains Latin Alphabet"
-    
+    file.close()
     return "Doesn't contain Latin Alphabet"
-
 
 filename = str(input("Enter filename: "))
 f = fileFunc(filename)

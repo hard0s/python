@@ -1,0 +1,25 @@
+import datetime
+#print(datetime.datetime.now())
+#print(datetime.datetime.today())
+#date_time = datetime.datetime.now()
+#current_time = date_time.time()
+#print(current_time)
+#print(datetime.time(10, 50, 30))
+#print(datetime.datetime(2023, 11, 13, 19, 45, 00))
+#td_object = datetime.timedelta(days=10, seconds=13, microseconds=960, milliseconds=11, minutes=27, hours=4, weeks=2)
+#print(td_object)
+#date = datetime.datetime.today() - datetime.timedelta(days=7)
+#print(date)
+#date1 = datetime.datetime.today() + datetime.timedelta(days=7)
+#print(date1)
+#today = datetime.datetime.today()
+#nw = datetime.datetime.today() + datetime.timedelta(days=7)
+#print('сегодня > следующая неделя', today > nw)
+
+#now = datetime.time(11, 10, 33)
+#nxh = datetime.time(14, 13, 15)
+#print(now < nxh)
+
+date = "10/12/26 17:20:13"
+date_obj = datetime.datetime.strptime(date, "%m/%d/%y %H:%M:%S")
+print(date_obj)

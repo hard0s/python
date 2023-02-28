@@ -9,12 +9,18 @@ clicks = 0
 def click_button():
     global clicks
     clicks += 1
-    btn["text"] = f"Никита гей {clicks}"
+    for i in range(99):
+        clicks += 1
 
-            
+    btn["text"] = f"хромосом {clicks}"
+
+
+
+lable = ttk.Label(text = "счетчик хромосом никиты", background="#FF1100", foreground="#FFF00C")
+lable.pack()
 
 
 btn = ttk.Button(text = "Click me", command = click_button)
-btn.pack(padx = 20, pady = 50)
+btn.pack(expand = True)
  
 root.mainloop()

@@ -29,8 +29,7 @@ def check():
            
 
 def start():
-       btn_check = ttk.Button(root, text = "Проверить", command = check())
-       
+       btn_check = ttk.Button(root, text = "Проверить")
        btn_check.pack()
 
        python_btn = ttk.Label(text="1) python")

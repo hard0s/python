@@ -5,9 +5,8 @@ root = Tk()
 root.title("Тестовое приложение")
 root.geometry("1920x500")
 root.iconbitmap(default = "./test_logo.ico")
-def entryAnsw():
-       answer = ttk.Entry(root)
-       answer.pack()
+
+
 
 def test_click(event):
             btn1.destroy()
@@ -17,29 +16,30 @@ def test_click(event):
             lable1.pack()
             easy()
 def easy():
-       btna1 = ttk.Button(text = "начать тест", command = start)
-       btna1.pack(expand = True)
        start()
-       btna1.destroy()
 def check():
-       entryAnsw()
-       entryAnsw.answer
-       if entryAnsw.answer.get() == "1":
-              print("Правильный ответ")
-       else :
-              print("Неправильный ответ")
+       answer = ttk.Entry()
+       answer.pack(anchor = "center")
+       match answer.get():
+              case "1":
+                     print("Правильно")
+              case "2":
+                     print("Неправильно")
 
            
 
 def start():
+       btn_check = ttk.Button(root, text = "Проверить", command = check())
+       
+       btn_check.pack()
 
-       python = "python"
-       lang = StringVar(value = python)
        python_btn = ttk.Label(text="1) python")
-       python_btn.pack()
-       java = "java"
+       python_btn.pack(anchor="center")
+
+
        java_btn = ttk.Label(text="2)java")
-       java_btn.pack()
+       java_btn.pack(anchor = "center", pady = 20)
+       
        check()
        
 
@@ -65,9 +65,6 @@ btn2 = ttk.Button(text = "Нормальная сложность")
 btn3 = ttk.Button(text = "Трудная сложность")
 
         
-
-
-
 lable = ttk.Label(text = "Начать тест", background="#000000", foreground="white")
 lable.pack()
 

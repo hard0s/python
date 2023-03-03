@@ -1,30 +1,47 @@
+import nigga
 from tkinter import *
 from tkinter import ttk
 root = Tk()
 root.title("Тестовое приложение")
-root.geometry("300x250")
+root.geometry("1920x500")
 root.iconbitmap(default = "./test_logo.ico")
+def entryAnsw():
+       answer = ttk.Entry(root)
+       answer.pack()
+
 def test_click(event):
             btn1.destroy()
             btn2.destroy()
             btn3.destroy()
+            lable1 = ttk.Label(text = "На каком языке написан этот тест", background=  "#000000", foreground = "#FFFFFF", font = ("Arial", 12))
+            lable1.pack()
             easy()
 def easy():
        btna1 = ttk.Button(text = "начать тест", command = start)
        btna1.pack(expand = True)
-       
+       start()
+       btna1.destroy()
+def check():
+       entryAnsw()
+       entryAnsw.answer
+       if entryAnsw.answer.get() == "1":
+              print("Правильный ответ")
+       else :
+              print("Неправильный ответ")
 
+           
 
 def start():
-       btna1 = ttk.Button(text = "начать тест")
-       btna1.destroy()
+
        python = "python"
        lang = StringVar(value = python)
-       python_btn = ttk.Radiobutton(text="python", value=python, variable=lang)
+       python_btn = ttk.Label(text="1) python")
        python_btn.pack()
        java = "java"
-       java_btn = ttk.Radiobutton(text="java", value=java, variable= java)
+       java_btn = ttk.Label(text="2)java")
        java_btn.pack()
+       check()
+       
 
        
 def click_button():
@@ -32,6 +49,8 @@ def click_button():
     clicks += 1
     if clicks == 1:
         btn.destroy()
+        lable.destroy()
+        
 
         #btn1.bind('<ButtonPress-1>', test_click())
 

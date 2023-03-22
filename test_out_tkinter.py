@@ -8,17 +8,18 @@ def fq():
       print("Правильно")
    else:
       print("Неправильно")
+   sq()
    check()
 def check():
    if fq() == "Правильно":
       cor = 1
    else:
-      exit(0)
+      exit(1)
 
 def sq():
    print(nigga.read2)
    y = input()
-   if y == "":
+   if y == nigga.anw:
       print("Правильно")
    else:
       print("Неправильно")

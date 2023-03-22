@@ -70,4 +70,22 @@ lable.pack()
 
 btn = ttk.Button(text = "Начать", command = click_button)
 btn.pack(expand = True)
+
+
+
+test_btn = ttk.Button(text = "", default=DISABLED)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 root.mainloop()

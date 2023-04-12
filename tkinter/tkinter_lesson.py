@@ -9,9 +9,7 @@ def click():
     clicks += 1
     btn["text"] = f"хромосом {clicks}"
     if clicks >= 10:
-        btn.destroy()
-def des():
-    btn.destroy()
+
 
 
 btn = ttk.Button(text="тест", command=click, state = DISABLED)

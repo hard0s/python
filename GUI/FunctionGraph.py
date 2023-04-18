@@ -3,33 +3,35 @@ from tkinter import *
 
 def main():
     f = input('f(x):')
-    color = input('color:')
+    color = "black"
     root = Tk()
-    canvas = Canvas(root, width=400, height=400)
-    canvas.create_line(200,400,200,0,width=1,arrow=LAST) 
-    canvas.create_line(0,200,400,200,width=1,arrow=LAST) 
-    
-    First_x = -200
-
+    canvas = Canvas(root, width=1020, height=510)
+    canvas.create_line(5, 250, 1005, 250,width=1,arrow=LAST, fill = color) # X asix
+    canvas.create_line(5, 500, 5, 0,width=1,arrow=LAST, fill = color) # Y asix
+    First_x = -245
+    # for i in range(16000):
+    #     if (i % 400 == 0):
+    #         k = First_x + (1 / 16) * i
+    #         canvas.create_line(k+250, -3+250, k+250, 3+250, width = 0.5, fill = "black") # X asix
+    #         if (k != 0):
+    #             canvas.create_line(3+250, k+250, -3+250, k+250, width = 0.5, fill = "black") # Y asix
+    #     try:
+    #         x = First_x + (1 / 16) * i
+    #         new_f = f.replace('x', str(x))
+    #         y = -eval(new_f) + 250
+    #         x += 250
+    #         canvas.create_oval(x, y, x, y, fill = "black")
+    #     except:
+    #        pass
     for i in range(16000):
-        if (i % 400 == 0):
-            k = First_x + (1 / 16) * i
-            canvas.create_line(k + 200, -3 + 200, k + 200, 3 + 200, width = 0.5, fill = 'black')
-            if (k != 0):
-                canvas.create_line(-3 + 200, k + 200, 3 + 200, k + 200, width = 0.5, fill = 'black')
-        try:
-            x = First_x + (1 / 16) * i
-            new_f = f.replace('x', str(x))
-            y = -eval(new_f) + 200
-            x += 200
-            canvas.create_oval(x, y, x + 1, y + 1, fill = 'black')
-        except:
-            pass
+        x = First_x + (1 / 16) * i
+        new_f = f.replace('x', str(x))
+        y = -eval(new_f) + 250
+        x += 250
+        canvas.create_oval(x, y, x + 1, y + 1, fill = 'black')
 
     canvas.pack()
     root.mainloop()
-    
-    
 
 if __name__ == '__main__':
     main()

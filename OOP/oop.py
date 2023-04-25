@@ -1,2 +1,6 @@
 class myClass:
-    pass
+    def printHello():
+        print("Hello World!")
+
+
+myClass.printHello()

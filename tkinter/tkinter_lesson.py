@@ -12,7 +12,7 @@ def click():
 
 
 
-btn = ttk.Button(text="тест", command=click, state = DISABLED)
+btn = ttk.Button(text="тест", command=click)
 btn.place(x = 30, y = 170)
 canvas = Canvas(root, width = 500, height = 500, background="black")
 canvas.pack(anchor = CENTER, expand = 1 )

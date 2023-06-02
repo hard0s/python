@@ -27,7 +27,6 @@ class Board:
         '1024': '#f9f6f2',
         '2048': '#f9f6f2',
     }
-
     def __init__(self):
         self.n=4
         self.window=Tk()

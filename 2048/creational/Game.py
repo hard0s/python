@@ -56,7 +56,7 @@ class Game:
                     break
         if(flag==1): #found 2048
             self.won=True
-            messagebox.showinfo('2048', message='You Wonnn!!')
+            messagebox.showinfo('2048', message='You Won!')
             return
         for i in range(4):
             for j in range(4):

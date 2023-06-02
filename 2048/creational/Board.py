@@ -27,6 +27,7 @@ class Board:
         '1024': '#f9f6f2',
         '2048': '#f9f6f2',
     }
+
     def __init__(self):
         self.n=4
         self.window=Tk()
@@ -47,6 +48,7 @@ class Board:
                 rows.append(l);
             self.board.append(rows)
         self.gameArea.grid()
+
     def reverse(self):
         for ind in range(4):
             i=0
@@ -55,6 +57,8 @@ class Board:
                 self.gridCell[ind][i],self.gridCell[ind][j]=self.gridCell[ind][j],self.gridCell[ind][i]
                 i+=1
                 j-=1
+
+
     def transpose(self):
         self.gridCell=[list(t)for t in zip(*self.gridCell)]
     def compressGrid(self):
@@ -69,6 +73,7 @@ class Board:
                         self.compress=True
                     cnt+=1
         self.gridCell=temp
+
     def mergeGrid(self):
         self.merge=False
         for i in range(4):
@@ -78,6 +83,7 @@ class Board:
                     self.gridCell[i][j + 1] = 0
                     self.score += self.gridCell[i][j]
                     self.merge = True
+
     def random_cell(self):
         cells=[]
         for i in range(4):
@@ -88,6 +94,7 @@ class Board:
         i=curr[0]
         j=curr[1]
         self.gridCell[i][j]=2
+
     def can_merge(self):
         for i in range(4):
             for j in range(3):
@@ -98,6 +105,7 @@ class Board:
                 if self.gridCell[i+1][j] == self.gridCell[i][j]:
                     return True
         return False
+    
     def paintGrid(self):
         for i in range(4):
             for j in range(4):

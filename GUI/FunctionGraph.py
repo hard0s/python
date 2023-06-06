@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from tkinter import *
+
 # функция для построения графика
 def plot_func():
     # получаем начальное и конечное значения диапазона по оси X

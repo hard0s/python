@@ -10,6 +10,6 @@ def fileFunc(filename):
     
     return "Doesn't contain Latin Alphabet"
 
-filename = str(input("Enter filename: "))
-f = fileFunc(filename)
+# filename = str(input("Enter filename: "))
+f = fileFunc("fileFunc.txt")
 print(f)

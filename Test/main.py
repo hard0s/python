@@ -1,13 +1,13 @@
-import sys
-import string
+import random
 
-def fileFunc():
-    file = open("tests.txt", "r")
+with open('tests.txt') as f:
+    lines = f.readlines()
 
-    text = file.read()
+qa_pairs = [line.strip().split('|') for line in lines]
+question, answer = random.choice(qa_pairs)
+user_answer = input(question + '\n')
 
-    
-def main():
-    pass
-
-main()
+if user_answer.strip().lower() == answer.lower():
+    print('Correct answer')
+else:
+    print(f'Sorry, the correct answer is "{answer}".')
